@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-beige text-forest-dark antialiased;
+  }
+  h1, h2, h3 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .section {
+    @apply py-16 md:py-24;
+  }
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.25em] text-gold-dark;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-md bg-forest px-6 py-3 text-sm font-semibold text-white transition hover:bg-forest-light focus:outline-none focus-visible:ring-2 focus-visible:ring-gold;
+  }
+  .btn-gold {
+    @apply inline-flex items-center justify-center rounded-md bg-gold px-6 py-3 text-sm font-semibold text-forest-dark transition hover:bg-gold-light focus:outline-none focus-visible:ring-2 focus-visible:ring-forest;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center rounded-md border border-forest px-6 py-3 text-sm font-semibold text-forest transition hover:bg-forest hover:text-white;
+  }
+  .card {
+    @apply overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-forest/10;
+  }
+  .input {
+    @apply w-full rounded-md border border-forest/20 bg-white px-4 py-2.5 text-sm text-forest-dark placeholder:text-forest/40 focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/30;
+  }
+}
